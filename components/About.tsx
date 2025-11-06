@@ -17,7 +17,7 @@ export default function About() {
             {emoji:'🎉', title:'Event Catering', text:'Weddings, corporate events, festivals, and private parties.'},
           ].map((c,i)=>(
             <div key={i} className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center shadow-lg">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand text-black flex items-center justify-center text-2xl">{c.emoji}</div>
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary text-black flex items-center justify-center text-2xl">{c.emoji}</div>
               <h3 className="text-xl font-semibold mb-2">{c.title}</h3>
               <p className="text-neutral-300">{c.text}</p>
             </div>
