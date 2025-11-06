@@ -4,7 +4,6 @@ export default function Hero() {
   return (
     <section id="home" className="relative isolate overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        {/* soft color clouds from your logo palette */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,#FF007A26,transparent_45%),radial-gradient(circle_at_80%_20%,#00D1FF26,transparent_45%),radial-gradient(circle_at_30%_80%,#FFD60026,transparent_45%)]" />
         <img alt="Tackia tacos and nachos collage background" src="/images/taco.jpg" className="h-96 w-full object-cover opacity-20" />
       </div>
