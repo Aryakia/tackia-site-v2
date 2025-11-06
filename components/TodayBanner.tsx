@@ -16,7 +16,7 @@ export default function TodayBanner() {
   if (!data) return null;
 
   return (
-    <div className="bg-brand text-black">
+    <div className="bg-primary text-black">
       <div className="container py-2 text-center text-sm font-semibold">
         {data.link ? <a href={data.link} className="underline">{data.text}</a> : data.text}
       </div>
