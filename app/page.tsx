@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Menu from "../components/Menu";
 import Events from "../components/Events";
+import BusinessCard from "../components/BusinessCard"; // <-- added
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
@@ -17,6 +18,7 @@ export default function Page() {
       <About />
       <Menu />
       <Events />
+      <BusinessCard />  {/* <-- added */}
       <Contact />
       <Footer />
     </main>
