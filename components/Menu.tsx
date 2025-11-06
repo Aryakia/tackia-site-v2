@@ -27,8 +27,9 @@ export default function Menu() {
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-lg">
             <h3 className="text-xl font-bold">Nachos</h3>
             <ul className="mt-4 space-y-2 text-sm">
-              <li className="flex justify-between"><span>Nachos</span><span className="font-semibold">$5.99</span></li>
               <li className="flex justify-between"><span>Loaded Nachos</span><span className="font-semibold">$9.99</span></li>
+            <h3 className="text-xl font-bold">Add Protein</h3>
+              <li className="flex justify-between"><span>Nachos</span><span className="font-semibold">$4.99</span></li>
             </ul>
             <p className="mt-3 text-xs text-neutral-300">
               Toppings: Black Beans, Olive, Corn, Red Cabbage, Onion & Parsley, Tomato, Guacamole, Sour Cream.
