@@ -23,9 +23,7 @@ export default function Contact() {
               <input name="phone" placeholder="Phone" className="rounded-lg bg-black/40 border border-white/10 px-4 py-3 outline-none" />
               <input name="event" placeholder="Event date / location" className="rounded-lg bg-black/40 border border-white/10 px-4 py-3 outline-none" />
               <textarea name="message" placeholder="Tell us about your event" rows={4} className="rounded-lg bg-black/40 border border-white/10 px-4 py-3 outline-none" />
-              <button className="rounded-lg bg-brand text-black px-5 py-3 font-semibold" type="submit">
-                Send
-              </button>
+              <button className="btn-primary" type="submit">Send</button>
               {ok && <p className="text-xs text-neutral-400">Submitted — you’ll see a confirmation page from Formspree.</p>}
             </form>
             <p className="mt-3 text-xs text-neutral-400">
@@ -36,11 +34,11 @@ export default function Contact() {
             <h3 className="text-xl font-semibold">Reach us</h3>
             <ul className="mt-3 space-y-2 text-sm text-neutral-300">
               <li>📍 North Vancouver, BC</li>
-              <li>📧 <a className="underline decoration-brand/40 underline-offset-4" href="mailto:catering@tackia.ca">catering@tackia.ca</a></li>
-              <li>📱 (236) 858-5373</li>
-              <li>📸 Instagram: <a href="#" className="underline">tac.kia</a></li>
+              <li>📧 <a className="underline decoration-secondary/40 underline-offset-4" href="mailto:catering@tackia.ca">catering@tackia.ca</a></li>
+              <li>📱 (604) 555-TACKIA</li>
+              <li>📸 Instagram: <a href="#" className="underline">tackia.ca</a></li>
             </ul>
-            <img src="/images/logo-cactus.jpg" alt="Tackia cactus logo with guitar" className="mt-6 rounded-xl border border-white/10" />
+            <img src="/images/logo-tackia.jpg" alt="Tackia cactus logo with sombrero" className="mt-6 rounded-xl border border-white/10" />
           </div>
         </div>
       </div>
