@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Tackia — Mexican Street Food Truck, Vancouver",
-  description: "Tacos, nachos, hot dogs with a Mexican twist. Find us across Vancouver & North Shore. Book catering at catering@tackia.ca",
+  title: "Tackia — Mexican Street Food Truck in Vancouver",
+  description: "Bright, bold, and flavour-packed. Tacos, nachos, and Mexican-style hot dogs. Book the Tackia truck for your next event.",
 };
 
 import "./../styles/globals.css";
