@@ -40,12 +40,12 @@ export default function Events() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {LOCATIONS.map((l, idx) => (
             <div key={idx} className="rounded-2xl border border-white/10 bg-neutral-900 p-6 shadow-lg">
-              <div className="text-lg font-semibold text-brand">{l.title}</div>
+              <div className="text-lg font-semibold text-secondary">{l.title}</div>
               <div className="text-sm text-neutral-400 mt-1">{l.date} • {l.time}</div>
               <div className="text-sm text-neutral-400">📍 {l.location}</div>
               <p className="text-neutral-300 mt-4">{l.description}</p>
               <div className="mt-4 flex items-center justify-between">
-                <span className="text-lg font-semibold">{l.price}</span>
+                <span className="text-lg font-semibold text-yellow">{l.price}</span>
                 <a href="#catering" className="text-sm underline">Get Details</a>
               </div>
             </div>
