@@ -35,8 +35,8 @@ export default function Contact() {
             <ul className="mt-3 space-y-2 text-sm text-neutral-300">
               <li>📍 North Vancouver, BC</li>
               <li>📧 <a className="underline decoration-secondary/40 underline-offset-4" href="mailto:catering@tackia.ca">catering@tackia.ca</a></li>
-              <li>📱 (604) 555-TACKIA</li>
-              <li>📸 Instagram: <a href="#" className="underline">tackia.ca</a></li>
+              <li>📱 (236) 858-5373</li>
+              <li>📸 Instagram: <a href="#" className="underline">tac.kia</a></li>
             </ul>
             <img src="/images/logo-tackia.jpg" alt="Tackia cactus logo with sombrero" className="mt-6 rounded-xl border border-white/10" />
           </div>
