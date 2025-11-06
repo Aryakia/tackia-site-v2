@@ -14,9 +14,9 @@ export default function Menu() {
             <h3 className="text-xl font-bold">Tacos</h3>
             <p className="text-sm text-neutral-300">Corn tortillas, fresh toppings, salsa verde.</p>
             <ul className="mt-4 space-y-2 text-sm">
-              <li className="flex justify-between"><span>1 Taco</span><span className="font-semibold">$5.99</span></li>
-              <li className="flex justify-between"><span>2 Tacos</span><span className="font-semibold">$10.99</span></li>
-              <li className="flex justify-between"><span>3 Tacos</span><span className="font-semibold">$14.99</span></li>
+              <li className="flex justify-between"><span>1 Taco</span><span className="font-semibold">$5.49</span></li>
+              <li className="flex justify-between"><span>2 Tacos</span><span className="font-semibold">$9.99</span></li>
+              <li className="flex justify-between"><span>3 Tacos</span><span className="font-semibold">$13.99</span></li>
               <li className="pt-2 border-t border-white/10 flex justify-between"><span>Special Taco</span><span className="font-semibold">$7.99</span></li>
             </ul>
             <div className="mt-4 text-xs text-neutral-300">
