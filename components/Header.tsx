@@ -19,6 +19,15 @@ export default function Header() {
           <a href="#businesscard" className="hover:text-primary transition">Business Card</a>
           <a href="#catering" className="hover:text-primary transition">Catering</a>
           <a href="#contact" className="hover:text-primary transition">Contact</a>
+          <a
+            href="https://www.instagram.com/tac.kia/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-secondary transition"
+            aria-label="Tackia Instagram"
+          >
+            📸 Instagram
+          </a>
         </nav>
         <a href="#menu" className="btn-primary">Order / Menu</a>
       </div>
