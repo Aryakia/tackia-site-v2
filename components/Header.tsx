@@ -12,6 +12,7 @@ export default function Header() {
         <nav className="hidden md:flex gap-6 text-sm">
           <a href="#menu" className="hover:text-brand transition">Menu</a>
           <a href="#findus" className="hover:text-brand transition">Find Us</a>
+          <a href="#businesscard" className="hover:text-brand transition">Business Card</a>
           <a href="#catering" className="hover:text-brand transition">Catering</a>
           <a href="#contact" className="hover:text-brand transition">Contact</a>
         </nav>
