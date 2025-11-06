@@ -23,6 +23,7 @@ export default function Footer() {
             <li><a href="#findus" className="hover:text-primary">Find Us</a></li>
             <li><a href="#businesscard" className="hover:text-primary">Business Card</a></li>
             <li><a href="#catering" className="hover:text-primary">Catering</a></li>
+            <li><a href="https://www.instagram.com/tac.kia/" target="_blank" className="hover:text-secondary">Instagram</a></li>
           </ul>
         </div>
       </div>
