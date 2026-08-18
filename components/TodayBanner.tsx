@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useEffect, useState } from 'react';
 
 type TodayData = { text: string; link?: string };
@@ -15,10 +16,12 @@ export default function TodayBanner() {
 
   if (!data) return null;
 
+  const content = <><span className="mr-2 inline-block h-2 w-2 rounded-full bg-[#b8e34b]" />{data.text}</>;
+
   return (
-    <div className="bg-primary text-black">
-      <div className="container py-2 text-center text-sm font-semibold">
-        {data.link ? <a href={data.link} className="underline">{data.text}</a> : data.text}
+    <div className="border-b border-white/10 bg-[#111] text-white">
+      <div className="container py-2.5 text-center text-xs font-semibold tracking-wide text-white/70 sm:text-sm">
+        {data.link ? <a href={data.link} className="hover:text-white">{content}</a> : content}
       </div>
     </div>
   );
