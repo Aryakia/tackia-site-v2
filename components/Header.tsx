@@ -1,21 +1,26 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const links = [
   ['Menu', '#menu'],
-  ['About', '#about'],
+  ['Gallery', '#gallery'],
   ['Find Us', '#findus'],
   ['Catering', '#catering'],
-  ['Contact', '#contact'],
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    const close = () => setOpen(false);
+    window.addEventListener('resize', close);
+    return () => window.removeEventListener('resize', close);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/75 backdrop-blur-xl">
-      <div className="container flex h-20 items-center justify-between">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/75 backdrop-blur-xl supports-[backdrop-filter]:bg-black/65">
+      <div className="container flex h-20 items-center justify-between gap-4">
         <a href="#home" className="flex items-center gap-3" aria-label="Tackia home">
           <img src="/images/logo-tackia.jpg" alt="Tackia" className="h-10 w-auto rounded-md" />
           <div className="hidden sm:block">
@@ -32,15 +37,15 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a href="#menu" className="btn-primary hidden sm:inline-flex">View Menu</a>
+          <a href="#order" className="btn-primary hidden sm:inline-flex">Order / Contact</a>
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 md:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white transition hover:bg-white/10 md:hidden"
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen(v => !v)}
           >
-            <span className="text-xl">{open ? '×' : '☰'}</span>
+            <span className="text-xl" aria-hidden="true">{open ? '×' : '☰'}</span>
           </button>
         </div>
       </div>
@@ -49,9 +54,10 @@ export default function Header() {
         <div className="border-t border-white/10 bg-black md:hidden">
           <nav className="container flex flex-col py-4" aria-label="Mobile navigation">
             {links.map(([label, href]) => (
-              <a key={href} href={href} onClick={() => setOpen(false)} className="border-b border-white/10 py-4 font-semibold">{label}</a>
+              <a key={href} href={href} onClick={() => setOpen(false)} className="border-b border-white/10 py-4 font-semibold text-white">{label}</a>
             ))}
-            <a href="https://www.instagram.com/tac.kia/" target="_blank" rel="noopener noreferrer" className="py-4 font-semibold">Instagram</a>
+            <a href="#order" onClick={() => setOpen(false)} className="border-b border-white/10 py-4 font-semibold text-[#ffc857]">Order / Contact</a>
+            <a href="https://www.instagram.com/tac.kia/" target="_blank" rel="noopener noreferrer" className="py-4 font-semibold text-white">Instagram</a>
           </nav>
         </div>
       )}
