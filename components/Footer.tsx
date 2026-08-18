@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black py-14">
+    <footer className="border-t border-white/10 bg-black py-14 text-white">
       <div className="container grid gap-10 md:grid-cols-[1.3fr_.7fr_.7fr]">
         <div>
           <div className="flex items-center gap-3">
@@ -13,13 +13,15 @@ export default function Footer() {
             </div>
           </div>
           <p className="mt-5 max-w-md text-sm leading-6 text-white/45">Fresh street food, mobile service and catering for markets, festivals and private events across Vancouver and the North Shore.</p>
+          <a href="#catering" className="mt-6 inline-flex rounded-full bg-[#ffc857] px-5 py-3 text-sm font-black text-black transition hover:bg-white">Book the truck</a>
         </div>
 
         <div>
           <h3 className="text-sm font-bold">Explore</h3>
           <div className="mt-4 flex flex-col gap-3 text-sm text-white/50">
             <a href="#menu" className="hover:text-white">Menu</a>
-            <a href="#about" className="hover:text-white">About</a>
+            <a href="#gallery" className="hover:text-white">Gallery</a>
+            <a href="#order" className="hover:text-white">Order / Contact</a>
             <a href="#findus" className="hover:text-white">Find Us</a>
             <a href="#catering" className="hover:text-white">Catering</a>
           </div>
@@ -30,11 +32,14 @@ export default function Footer() {
           <div className="mt-4 flex flex-col gap-3 text-sm text-white/50">
             <a href="tel:+12368585373" className="hover:text-white">236-858-5373</a>
             <a href="mailto:catering@tackia.ca" className="hover:text-white">catering@tackia.ca</a>
-            <a href="https://www.instagram.com/tac.kia/" target="_blank" rel="noopener noreferrer" className="hover:text-white">Instagram</a>
+            <a href="https://www.instagram.com/tac.kia/" target="_blank" rel="noopener noreferrer" className="hover:text-white">Instagram @tac.kia</a>
           </div>
         </div>
       </div>
-      <div className="container mt-12 border-t border-white/10 pt-6 text-xs text-white/30">© {new Date().getFullYear()} Tackia. All rights reserved.</div>
+      <div className="container mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/30 sm:flex-row sm:items-center sm:justify-between">
+        <span>© {new Date().getFullYear()} Tackia. All rights reserved.</span>
+        <span>Vancouver, British Columbia</span>
+      </div>
     </footer>
   );
 }
