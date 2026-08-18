@@ -19,7 +19,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/75 backdrop-blur-xl supports-[backdrop-filter]:bg-black/65">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/75 text-white backdrop-blur-xl supports-[backdrop-filter]:bg-black/65">
       <div className="container flex h-20 items-center justify-between gap-4">
         <a href="#home" className="flex items-center gap-3" aria-label="Tackia home">
           <img src="/images/logo-tackia.jpg" alt="Tackia" className="h-10 w-auto rounded-md" />
