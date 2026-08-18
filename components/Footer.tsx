@@ -2,31 +2,39 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer id="contact" className="border-t border-white/10 bg-ink">
-      <div className="container py-12 grid md:grid-cols-3 gap-8">
+    <footer className="border-t border-white/10 bg-black py-14">
+      <div className="container grid gap-10 md:grid-cols-[1.3fr_.7fr_.7fr]">
         <div>
-          <div className="text-2xl font-black text-primary">Tackia</div>
-          <p className="mt-2 text-sm text-neutral-300">North Vancouver, BC</p>
-          <p className="mt-4 text-sm text-neutral-400">© {new Date().getFullYear()} Tackia. All rights reserved.</p>
+          <div className="flex items-center gap-3">
+            <img src="/images/logo-tackia.jpg" alt="Tackia" className="h-10 w-auto rounded-md" />
+            <div>
+              <div className="font-black tracking-[0.18em]">TACKIA</div>
+              <div className="text-xs text-white/40">Mexican street food • Vancouver</div>
+            </div>
+          </div>
+          <p className="mt-5 max-w-md text-sm leading-6 text-white/45">Fresh street food, mobile service and catering for markets, festivals and private events across Vancouver and the North Shore.</p>
         </div>
+
         <div>
-          <h4 className="font-semibold">Contact</h4>
-          <ul className="mt-3 space-y-2 text-sm text-neutral-300">
-            <li>📧 <a className="underline decoration-secondary/40 underline-offset-4" href="mailto:catering@tackia.ca">catering@tackia.ca</a></li>
-            <li>📱 (236) 858-5373</li>
-          </ul>
+          <h3 className="text-sm font-bold">Explore</h3>
+          <div className="mt-4 flex flex-col gap-3 text-sm text-white/50">
+            <a href="#menu" className="hover:text-white">Menu</a>
+            <a href="#about" className="hover:text-white">About</a>
+            <a href="#findus" className="hover:text-white">Find Us</a>
+            <a href="#catering" className="hover:text-white">Catering</a>
+          </div>
         </div>
+
         <div>
-          <h4 className="font-semibold">Quick Links</h4>
-          <ul className="mt-3 space-y-2 text-sm text-neutral-300">
-            <li><a href="#menu" className="hover:text-primary">Menu</a></li>
-            <li><a href="#findus" className="hover:text-primary">Find Us</a></li>
-            <li><a href="#businesscard" className="hover:text-primary">Business Card</a></li>
-            <li><a href="#catering" className="hover:text-primary">Catering</a></li>
-            <li><a href="https://www.instagram.com/tac.kia/" target="_blank" className="hover:text-secondary">Instagram</a></li>
-          </ul>
+          <h3 className="text-sm font-bold">Connect</h3>
+          <div className="mt-4 flex flex-col gap-3 text-sm text-white/50">
+            <a href="tel:+12368585373" className="hover:text-white">236-858-5373</a>
+            <a href="mailto:catering@tackia.ca" className="hover:text-white">catering@tackia.ca</a>
+            <a href="https://www.instagram.com/tac.kia/" target="_blank" rel="noopener noreferrer" className="hover:text-white">Instagram</a>
+          </div>
         </div>
       </div>
+      <div className="container mt-12 border-t border-white/10 pt-6 text-xs text-white/30">© {new Date().getFullYear()} Tackia. All rights reserved.</div>
     </footer>
   );
 }
