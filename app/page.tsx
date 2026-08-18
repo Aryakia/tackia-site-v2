@@ -4,21 +4,25 @@ import TodayBanner from "../components/TodayBanner";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Menu from "../components/Menu";
+import Gallery from "../components/Gallery";
+import OrderOnline from "../components/OrderOnline";
 import Events from "../components/Events";
-import BusinessCard from "../components/BusinessCard"; // <-- added
+import FAQ from "../components/FAQ";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
 export default function Page() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen overflow-x-hidden">
       <Header />
       <TodayBanner />
       <Hero />
       <About />
       <Menu />
+      <Gallery />
+      <OrderOnline />
       <Events />
-      <BusinessCard />  {/* <-- added */}
+      <FAQ />
       <Contact />
       <Footer />
     </main>

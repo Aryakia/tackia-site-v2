@@ -1,54 +1,48 @@
 import React from 'react';
 
-const LOCATIONS = [
+const options = [
   {
-    title: "Lonsdale Quay Market",
-    date: "Every Friday",
-    time: "11:00 AM - 8:00 PM",
-    location: "123 Carrie Cates Ct, North Vancouver",
-    description: "Find us at the iconic Lonsdale Quay with a full menu of fresh Mexican street food and stunning harbor views.",
-    price: "Regular Menu"
+    title: 'Find the truck',
+    label: 'Follow our schedule',
+    text: 'Our location changes with markets and events. Check the live banner above and Instagram for the latest service location and hours.',
+    action: 'Follow @tac.kia',
+    href: 'https://www.instagram.com/tac.kia/',
   },
   {
-    title: "Shipyards Night Market",
-    date: "Saturdays (Summer)",
-    time: "5:00 PM - 10:00 PM",
-    location: "125 Victory Ship Way, North Vancouver",
-    description: "Join us at North Vancouver's premier night market for tacos, nachos, and live entertainment under the lights.",
-    price: "Regular Menu"
+    title: 'Private catering',
+    label: 'We bring the kitchen',
+    text: 'Birthdays, weddings, company events and community gatherings — Tackia can serve directly from the truck at your venue.',
+    action: 'Request catering',
+    href: '#catering',
   },
   {
-    title: "Private Event Catering",
-    date: "Book Anytime",
-    time: "Flexible Hours",
-    location: "Your Event Location",
-    description: "Book Tackia for weddings, corporate events, parties, and festivals. We bring our full kitchen to serve your guests fresh Mexican food.",
-    price: "Custom Quote"
-  }
+    title: 'Festivals & markets',
+    label: 'Built for busy crowds',
+    text: 'Looking for a colourful food vendor with fast service and an approachable menu? Invite Tackia to your market, festival or public event.',
+    action: 'Contact us',
+    href: '#contact',
+  },
 ];
 
 export default function Events() {
   return (
-    <section id="findus" className="py-20 border-y border-white/10 bg-white/5">
+    <section id="findus" className="py-24 sm:py-32">
       <div className="container">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-2">Find Us & Book Catering</h2>
-          <p className="text-lg text-neutral-300 max-w-3xl mx-auto">
-            Follow our food truck around Vancouver or book us for your next event.
-          </p>
+        <div className="max-w-3xl">
+          <p className="section-kicker">Where to find us</p>
+          <h2 className="display-title mt-4">From the curb to your celebration.</h2>
+          <p className="mt-6 text-lg leading-8 text-white/60">Tackia is mobile by design. Catch us around Vancouver or bring the full food-truck experience to your own event.</p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {LOCATIONS.map((l, idx) => (
-            <div key={idx} className="rounded-2xl border border-white/10 bg-neutral-900 p-6 shadow-lg">
-              <div className="text-lg font-semibold text-secondary">{l.title}</div>
-              <div className="text-sm text-neutral-400 mt-1">{l.date} • {l.time}</div>
-              <div className="text-sm text-neutral-400">📍 {l.location}</div>
-              <p className="text-neutral-300 mt-4">{l.description}</p>
-              <div className="mt-4 flex items-center justify-between">
-                <span className="text-lg font-semibold text-yellow">{l.price}</span>
-                <a href="#catering" className="text-sm underline">Get Details</a>
-              </div>
-            </div>
+
+        <div className="mt-12 grid gap-5 lg:grid-cols-3">
+          {options.map((item, i) => (
+            <article key={item.title} className="glass-card flex min-h-[330px] flex-col p-7 sm:p-8">
+              <span className="text-sm font-black text-[#ffc857]">0{i + 1}</span>
+              <p className="mt-8 text-xs font-bold uppercase tracking-[0.18em] text-white/40">{item.label}</p>
+              <h3 className="mt-3 text-2xl font-black">{item.title}</h3>
+              <p className="mt-4 flex-1 leading-7 text-white/55">{item.text}</p>
+              <a href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined} className="mt-8 font-bold text-[#b8e34b] hover:text-white">{item.action} →</a>
+            </article>
           ))}
         </div>
       </div>
