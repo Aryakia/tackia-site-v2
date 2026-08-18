@@ -2,16 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: dark; }
+:root {
+  color-scheme: dark;
+  --ink: #0b0b0b;
+  --paper: #fff8ef;
+  --chili: #f04a2f;
+  --lime: #b8e34b;
+  --gold: #ffc857;
+}
 
-html, body { @apply bg-ink text-neutral-100; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(240,74,47,.10), transparent 32rem),
+    radial-gradient(circle at 90% 15%, rgba(184,227,75,.08), transparent 28rem),
+    var(--ink);
+  color: #f7f4ee;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
 
-a { @apply text-secondary hover:text-secondary-dark transition-colors; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+::selection { background: var(--gold); color: #111; }
 
-.container { @apply mx-auto max-w-6xl px-4; }
+.container { @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8; }
+.section-kicker { @apply text-xs font-bold uppercase tracking-[0.28em] text-lime-300; }
+.display-title { @apply text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl; }
+.glass-card { @apply rounded-3xl border border-white/10 bg-white/[0.045] backdrop-blur; }
 
 .btn-primary {
-  @apply rounded-xl bg-primary text-black font-semibold px-5 py-3 shadow;
-  box-shadow: 0 8px 24px rgba(255, 0, 122, 0.25);
+  @apply inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-bold text-black transition duration-300 hover:-translate-y-0.5 hover:bg-[#ffc857] focus:outline-none focus:ring-2 focus:ring-[#ffc857] focus:ring-offset-2 focus:ring-offset-black;
 }
-.btn-primary:hover { filter: brightness(0.95); }
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50;
+}
+
+.food-image { @apply h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]; }
