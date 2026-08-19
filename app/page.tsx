@@ -18,9 +18,9 @@ export default function Page() {
     <main className="min-h-screen overflow-x-hidden">
       <Header />
       <Hero />
-      <HomeLocation />
       <About />
       <MenuPreview />
+      <HomeLocation />
       <GoogleReviews />
       <OrderOnline />
       <Gallery />
