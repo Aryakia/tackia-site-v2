@@ -1,0 +1,10 @@
+{
+  "name": "Tackia Mexican Street Food",
+  "short_name": "Tackia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff8ef",
+  "theme_color": "#171512",
+  "description": "Mexican-inspired street food, locations and catering in Vancouver.",
+  "icons": []
+}
